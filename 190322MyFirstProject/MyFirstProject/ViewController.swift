@@ -60,6 +60,7 @@ class ViewController: UIViewController {
         
     }
     
+    //UISegmentedControl : 선택 내용이 바뀔 때마다 Label 의 내용도 해당 타이틀 값으로 함께 변경되도록 구현
     @IBAction func onSegmentControl(_ sender: UISegmentedControl) {
        
         if(sender.selectedSegmentIndex == 0) {
