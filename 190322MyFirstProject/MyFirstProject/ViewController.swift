@@ -8,9 +8,11 @@
 
 import UIKit
 
-var num = 0
+
 
 class ViewController: UIViewController {
+    
+    var num = 0
     
     @IBOutlet weak var numberLable: UILabel!
     @IBOutlet weak var decreaseButton: UIButton!
