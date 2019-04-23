@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayoutTask" customModuleProvider="target" sceneMemberID="viewController">
+<view key="view" contentMode="scaleToFill" id="GpY-cV-dSt">
+<rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sg0-M4-L0b" userLabel="First">
+<rect key="frame" x="20" y="104" width="155" height="150"/>
+<color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+<constraints>
+<constraint firstAttribute="height" constant="150" id="hBf-G2-SHS"/>
+</constraints>
+</view>
+<view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R20-Ua-kN5" userLabel="Second">
+<rect key="frame" x="183" y="104" width="91.5" height="150"/>
+<color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</view>
+<view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iea-G7-G6C" userLabel="Third">
+<rect key="frame" x="282.5" y="104" width="53.5" height="150"/>
+<color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</view>
+<view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="if1-Zi-PSF" userLabel="Fourth">
+<rect key="frame" x="344" y="104" width="28.5" height="150"/>
+<color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</view>
+<view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gp-Jc-Srf" userLabel="Fifth">
+<rect key="frame" x="380.5" y="104" width="13.5" height="150"/>
+<color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</view>
+</subviews>
+<color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+<constraints>
+<constraint firstItem="R20-Ua-kN5" firstAttribute="height" secondItem="Sg0-M4-L0b" secondAttribute="height" id="5lO-WR-8bK"/>
+<constraint firstItem="Iea-G7-G6C" firstAttribute="width" secondItem="R20-Ua-kN5" secondAttribute="width" multiplier="0.6" constant="-2" id="8ci-15-q1c"/>
+<constraint firstItem="Iea-G7-G6C" firstAttribute="height" secondItem="R20-Ua-kN5" secondAttribute="height" id="Dfj-dZ-3tJ"/>
+<constraint firstItem="8gp-Jc-Srf" firstAttribute="height" secondItem="if1-Zi-PSF" secondAttribute="height" id="EL5-GC-dLQ"/>
+<constraint firstItem="if1-Zi-PSF" firstAttribute="top" secondItem="Iea-G7-G6C" secondAttribute="top" id="GfE-gk-89t"/>
+<constraint firstItem="1VI-2D-6X8" firstAttribute="trailing" secondItem="8gp-Jc-Srf" secondAttribute="trailing" constant="20" id="MVw-N1-Qlu"/>
+<constraint firstItem="if1-Zi-PSF" firstAttribute="width" secondItem="Iea-G7-G6C" secondAttribute="width" multiplier="0.6" constant="-3" id="Oe0-t3-hYf"/>
+<constraint firstItem="Iea-G7-G6C" firstAttribute="top" secondItem="R20-Ua-kN5" secondAttribute="top" id="PhF-Mx-fHy"/>
+<constraint firstItem="8gp-Jc-Srf" firstAttribute="top" secondItem="if1-Zi-PSF" secondAttribute="top" id="SDN-zC-JzH"/>
+<constraint firstItem="Sg0-M4-L0b" firstAttribute="leading" secondItem="1VI-2D-6X8" secondAttribute="leading" constant="20" id="V4e-jB-odJ"/>
+<constraint firstItem="if1-Zi-PSF" firstAttribute="leading" secondItem="Iea-G7-G6C" secondAttribute="trailing" constant="8" id="eYf-i4-AYE"/>
+<constraint firstItem="Iea-G7-G6C" firstAttribute="leading" secondItem="R20-Ua-kN5" secondAttribute="trailing" constant="8" id="kev-ps-cNQ"/>
+<constraint firstItem="8gp-Jc-Srf" firstAttribute="leading" secondItem="if1-Zi-PSF" secondAttribute="trailing" constant="8" id="lIp-O6-cRd"/>
+<constraint firstItem="R20-Ua-kN5" firstAttribute="top" secondItem="Sg0-M4-L0b" secondAttribute="top" id="mfU-se-Uos"/>
+<constraint firstItem="if1-Zi-PSF" firstAttribute="height" secondItem="Iea-G7-G6C" secondAttribute="height" id="mu4-yx-aup"/>
+<constraint firstItem="R20-Ua-kN5" firstAttribute="leading" secondItem="Sg0-M4-L0b" secondAttribute="trailing" constant="8" id="r6Q-5g-ULV"/>
+<constraint firstItem="R20-Ua-kN5" firstAttribute="width" secondItem="Sg0-M4-L0b" secondAttribute="width" multiplier="0.6" constant="-1" id="rCd-My-hgc"/>
+<constraint firstItem="8gp-Jc-Srf" firstAttribute="width" secondItem="if1-Zi-PSF" secondAttribute="width" multiplier="0.6" constant="-4" id="sIp-1f-JfC"/>
+<constraint firstItem="Sg0-M4-L0b" firstAttribute="top" secondItem="1VI-2D-6X8" secondAttribute="top" constant="60" id="tjH-mc-BVW"/>
+</constraints>
+<viewLayoutGuide key="safeArea" id="1VI-2D-6X8"/>
+</view>
+
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
