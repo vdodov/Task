@@ -13,6 +13,7 @@ class GestureViewController2: UIViewController {
     let pointLabel = UILabel()
     var tapCount = 0
     var pastXY = CGPoint(x: 0, y: 0)
+    let tapGesture = UITapGestureRecognizer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,8 @@ class GestureViewController2: UIViewController {
     func configure() {
         view.addSubview(tapLabel)
         view.addSubview(pointLabel)
-        
-        
+        view.addGestureRecognizer(tapGesture)
+        tapGesture.addTarget(self, action: #selector(tapGestureFunc))
         
         
         let guide = view.safeAreaLayoutGuide
@@ -43,12 +44,10 @@ class GestureViewController2: UIViewController {
         
         
     }
+    //UITapGestureRecognizer 이용
+    @objc func tapGestureFunc(_ sender: UITapGestureRecognizer) {
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        
-        guard let touch = touches.first else { return }
-        let touchPoint = touch.location(in: touch.view)
+        let touchPoint = sender.location(in: sender.view)
         let strNum = String(format: "%.1f", Double(touchPoint.x))
         let strNum2 = String(format: "%.1f", Double(touchPoint.y))
         pointLabel.text = "좌표: \(strNum), \(strNum2)"
@@ -62,10 +61,32 @@ class GestureViewController2: UIViewController {
         
         tapCount += 1
         tapLabel.text = "횟수: \(tapCount)"
-        
-        
-        
-        
-        
+        print("tapGestureFunc")
     }
+    
+    //touchesBegan 이용
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        super.touchesBegan(touches, with: event)
+//
+//        guard let touch = touches.first else { return }
+//        let touchPoint = touch.location(in: touch.view)
+//        let strNum = String(format: "%.1f", Double(touchPoint.x))
+//        let strNum2 = String(format: "%.1f", Double(touchPoint.y))
+//        pointLabel.text = "좌표: \(strNum), \(strNum2)"
+//
+//
+//        if abs(pastXY.x - touchPoint.x) > 10 || abs(pastXY.y - touchPoint.y) > 10 {
+//            tapCount = 0
+//        }
+//
+//        pastXY = touchPoint
+//
+//        tapCount += 1
+//        tapLabel.text = "횟수: \(tapCount)"
+//
+//
+//
+//
+//
+//    }
 }
