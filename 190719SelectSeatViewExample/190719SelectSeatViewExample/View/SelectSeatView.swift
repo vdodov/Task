@@ -10,6 +10,8 @@ import UIKit
 
 protocol SelectSeatViewDelegate {
   func touchUpPlusButton(_ sender: UIButton)
+  
+  func touchUpFinishButton(_ sender: UIButton)
 }
 
 class SelectSeatView: UIView {
@@ -312,7 +314,7 @@ class SelectSeatView: UIView {
   
   private let seniorLabel: UILabel = {
     let label = UILabel()
-    label.text = "일반"
+    label.text = "우대"
     label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
     label.translatesAutoresizingMaskIntoConstraints = false
     return label
@@ -357,6 +359,7 @@ class SelectSeatView: UIView {
     button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
     button.setTitleColor(.white, for: .normal)
     button.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
+    button.addTarget(self, action: #selector(didTapFinishButton(_:)), for: .touchUpInside)
     button.translatesAutoresizingMaskIntoConstraints = false
     return button
   }()
@@ -368,6 +371,10 @@ class SelectSeatView: UIView {
     setupSelectSeatView()
   }
   
+  @objc func didTapFinishButton(_ sender: UIButton) {
+    guard totalCount > 0 else { delegate?.touchUpFinishButton(sender); return }
+
+  }
   
   @objc func didTapPlusButton(_ sender: UIButton) {
     

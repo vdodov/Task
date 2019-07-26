@@ -40,9 +40,11 @@ class SelectSeatViewController: UIViewController {
 }
 
 extension SelectSeatViewController: SelectSeatViewDelegate {
+  func touchUpFinishButton(_ sender: UIButton) {
+    UIAlertController.show(title: "", message: "관람하실 인원을 선택해주세요.", from: self)
+  }
+  
   func touchUpPlusButton(_ sender: UIButton) {
     UIAlertController.show(title: "", message: "인원선택은 총 8명까지 가능합니다", from: self)
   }
-  
-  
 }
