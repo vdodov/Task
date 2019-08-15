@@ -17,8 +17,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
     window = UIWindow(frame: UIScreen.main.bounds)
+    let tabBar = UITabBarController()
+    
+    let vc = ViewController()
+    let secondVC = SecondViewController()
+    
+    vc.tabBarItem = UITabBarItem(title: "first", image: nil, tag: 0)
+    secondVC.tabBarItem = UITabBarItem(title: "second", image: nil, tag: 1)
+    
+    tabBar.viewControllers = [
+    vc,
+    secondVC
+    ]
+    
+    
     window?.backgroundColor = .white
-    window?.rootViewController = ViewController()
+    window?.rootViewController = tabBar
     window?.makeKeyAndVisible()
     
     
