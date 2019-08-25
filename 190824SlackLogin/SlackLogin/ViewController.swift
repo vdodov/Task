@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     }()
     
     
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var placeholderLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var urlField: UITextField!
@@ -25,10 +26,30 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
+    //notification을 저장할 속성을 선언
+    var tokens = [NSObjectProtocol]()
+    
+    deinit {
+        tokens.forEach { NotificationCenter.default.removeObserver($0)}
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //옵져버 추가
+        var token = NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: OperationQueue.main) { [weak self] (noti) in
+            //키보드 높이 구하기
+            if let frameValue = noti.userInfo? [UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+                let keybordFrame = frameValue.cgRectValue
+                
+                self?.bottomConstraint.constant = keybordFrame.size.height
+                
+                UIView.animate(withDuration: 0.3, animations: {
+                    self?.view.layoutIfNeeded()
+                })
+            }
+        }
+        tokens.append(token)
     }
 
 
@@ -37,8 +58,6 @@ class ViewController: UIViewController {
 extension ViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-//        print(">>>>", textField.text) //바로 이전문자가 return
-        
         
         if string.count > 0 { //입력모드에서만 실행
             guard string.rangeOfCharacter(from: charSet) == nil else {
@@ -46,6 +65,7 @@ extension ViewController: UITextFieldDelegate {
             }
         }
         
+        //        print(">>>>", textField.text) //바로 이전문자가 return
         let finalText = NSMutableString(string: textField.text ?? "") //텍스트 속성에 저장된 문자열로 초기화
         finalText.replaceCharacters(in: range, with: string) //입력이나 삭제가 반영된 최종문자열 출력
         

@@ -102,6 +102,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="0u8-WK-8hl"/>
                     <connections>
+                        <outlet property="bottomConstraint" destination="qGc-li-BRg" id="rqI-FU-dzG"/>
                         <outlet property="nextButton" destination="h0V-ND-n43" id="iY7-GI-Sbb"/>
                         <outlet property="placeholderLabel" destination="tEm-Go-gWE" id="2Xy-Mh-UrW"/>
                         <outlet property="placeholderLeadingConstraint" destination="Qcd-fh-HzD" id="TDh-5G-3Mb"/>
