@@ -1,11 +1,11 @@
-// 이름과 나이를 입력 받아 자신을 소개하는 글을 출력하는 함수 2
+// 이름과 나이를 입력 받아 자신을 소개하는 글을 출력하는 함수 
 func sayHello(name: String, age:Int) {
     print(name, age)
 }
 sayHello(name: "ChaSuYeon", age: 24)
 
 
-//정수를 하나 입력받아 2의 배수 여부를 반환하는 함수 2
+//정수를 하나 입력받아 2의 배수 여부를 반환하는 함수
 func evenNumber(number: Int) -> String {
     if (number % 2 == 0) {
         return "true"
@@ -15,7 +15,7 @@ func evenNumber(number: Int) -> String {
 }
 evenNumber(number: 7)
 
-//정수를 두 개 입력 받아 곱한 결과를 반환하는 함수 (파라미터 하나의 기본 값은 10) 2
+//정수를 두 개 입력 받아 곱한 결과를 반환하는 함수 (파라미터 하나의 기본 값은 10)
 let a: Int = 10
 func mulitple(num1:Int, num2:Int) -> Int {
     return (a*num1*num2)
@@ -28,7 +28,7 @@ func average(num1:Int, num2:Int, num3:Int, num4:Int) -> Int {
 }
 average(num1: 80, num2: 90, num3: 100, num4: 70)
 
-//점수(문자 또는 숫자)를 입력받아 학점을 반환하는 함수 만들기 (90점 이상 A, 80점 이상 B, 70점 이상 C, 그 이하 F) 2
+//점수(문자 또는 숫자)를 입력받아 학점을 반환하는 함수 만들기 (90점 이상 A, 80점 이상 B, 70점 이상 C, 그 이하 F)
 func credit(num:Int) -> String {
     if (num >= 90) {
         return "A"
@@ -42,7 +42,7 @@ func credit(num:Int) -> String {
 }
 credit(num:100)
 
-//점수(문자 또는 숫자)를 여러 개 입력받아 평균 점수에 대한 학점을 반환하는 함수 만들기 (90점 이상 A, 80점 이상 B, 70점 이상 C, 그 이하 F) 3
+//점수(문자 또는 숫자)를 여러 개 입력받아 평균 점수에 대한 학점을 반환하는 함수 만들기 (90점 이상 A, 80점 이상 B, 70점 이상 C, 그 이하 F)
 func credit2(num1:Int, num2:Int, num3:Int) -> String {
     let avg: Int = ((num1 + num2 + num3)/3)
     
