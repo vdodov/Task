@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+  
+  //이메일만 입력받기 위한 문자열 저장(반대로)
     let charSet: CharacterSet = {
        var cs = CharacterSet.lowercaseLetters
         cs.insert(charactersIn: "0123456789")
@@ -65,7 +66,7 @@ extension ViewController: UITextFieldDelegate {
             }
         }
         
-        //        print(">>>>", textField.text) //바로 이전문자가 return
+        //print(">>>>", textField.text) //바로 이전문자가 return
         let finalText = NSMutableString(string: textField.text ?? "") //텍스트 속성에 저장된 문자열로 초기화
         finalText.replaceCharacters(in: range, with: string) //입력이나 삭제가 반영된 최종문자열 출력
         
