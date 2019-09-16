@@ -2,6 +2,26 @@
 
 ---
 
+- 190904(수): CustomFooterExample
+- 190824(토): SlackLogin -> 진행중
+- 190812(월): RGBColorNotification
+- 190808(목): MegaboxPreferTheaterExample
+- 190805(월): MegaboxPaymentExample
+- 190802(금): MegaboxSettingExample
+- 190727(토): MegaboxMovieDetailExample
+- 190719(금): MegaboxSelectSeatViewExample
+- 190714(일): ScrollViewExample
+- 190711(목): MegaboxMovieCategoryExample, MegaboxMypageExample
+- 190710(수): MegaBoxLoginExample
+- 190626(수): iBeaconExample
+- 190623(일): UserNotificationExample
+- 190618(화): FirebaseLoginExample
+- 190610(월): APIMoviePractice(with Alamofire)
+- 190603(월): APIMoviePractice
+- 190510(금): MapKitTask
+- 190507(화): GestureRecognizerExample
+- 190501(수): SendTextNotification
+- 190430(화): NotificationCenterColor
 - 190415(월): ShoppingItems
 - 190409(화): AutoLayout-with Code, AutoLayout-with Storyboard, CustomAlertController
 - 190405(금): LoginForm, TabNaviEx(짝퉁카카오)
