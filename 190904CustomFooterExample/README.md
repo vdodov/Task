@@ -1,4 +1,7 @@
-### **가사**
+####CustomFooter
 
-거리마다 기쁨으로  춤을 추게 하시고  주의 백성 기도할 때  이 땅 회복하소서   십자가 앞에 행할 때  주의 빛 비추시고  물이 바다 덮음 같이  주 영광 채우소서   산 위에서 계곡까지  우리 찬양 울리네  하늘에서 열방까지  우리 노래 가득하네   할렐루야 할렐루야  할렐루야 할렐루야
 
+
+✅완성화면
+
+![FooterExample](/Users/chasuyeon/Desktop/Task/190904CustomFooterExample/image/FooterExample.gif)
