@@ -15,7 +15,9 @@
 - 190710(수): MegaBoxLoginExample
 - 190626(수): iBeaconExample
 - 190623(일): UserNotificationExample
+- 190619(수): CustomTabBar
 - 190618(화): FirebaseLoginExample
+- 190612(수): MusicAppExample
 - 190610(월): APIMoviePractice(with Alamofire)
 - 190603(월): APIMoviePractice
 - 190510(금): MapKitTask
@@ -25,7 +27,7 @@
 - 190415(월): ShoppingItems
 - 190409(화): AutoLayout-with Code, AutoLayout-with Storyboard, CustomAlertController
 - 190405(금): LoginForm, TabNaviEx(짝퉁카카오)
-- 190404(목): Singleton
+- 190404(목): Singleton, UserDefaults
 - 190402(화): 타입캐스팅, StroyboardSegue
 - 190326(화): UIViewController, UITextField
 - 190325(월): AlertController, Frame VS Bousds
